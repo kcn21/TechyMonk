@@ -1,0 +1,64 @@
+<br>
+<br>
+	<div class="limiter" style="background-image: url(assets/login/bg.jpg); background-repeat: no-repeat; background-size: cover;">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(../assets/login/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						Sign Up					</span>
+				</div>
+			<div>
+				<form class="login100-form validate-form" #userForm="ngForm" (ngSubmit) = "onClickSubmit(username.value,password.value,emailid.value)">
+						<div class="form-group wrap-input100 validate-input m-b-18" data-validate = "Email is required">
+							<span class="label-input100">UserName</span>
+							<input type="text" required #username="ngModel" ngModel class="input100 is-invalid form-control" name="username" [(ngModel)]="userModel.username">
+							 <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+								<div *ngIf="username.errors.required">
+									Username is required
+								</div>
+							</div>
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+							<span class="label-input100">Password</span>
+							<input type="password" required minlength="6" maxlength="12" ngModel #password="ngModel" class="input100 is-invalid form-control" name="password" [(ngModel)]="userModel.password">
+							 <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+								<div *ngIf="password.errors.required">
+									Password is required
+								</div>
+								<div *ngIf="password.errors.minlength">
+									Password must be of length 6 to 12
+								</div>
+								<div *ngIf="password.errors.maxlength">
+										Password must be of length 6 to 12
+								</div>
+							</div>
+							<span class="focus-input100"></span>
+						</div>
+						<div class="form-group wrap-input100 validate-input m-b-18" data-validate = "Email is required">
+							<span class="label-input100">Email</span>
+							<input type="email" required minlength="4" ngModel #emailid="ngModel" pattern="^[a-z0-9,_%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="input100 is-invalid form-control" name="Emailid" [(ngModel)]="userModel.emailid">
+							<div *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)" class="alert alert-danger">
+								<div *ngIf="emailid.errors.required">
+									Emailid is required
+								</div>
+								<div *ngIf="emailid.errors.minlength">
+									Emailid must be at least 4 characters long.
+								</div>
+							</div>
+							<span class="focus-input100"></span>
+						</div>
+          <br>
+          <br>
+    
+					<div class="container-login100-form-btn">
+            			<button class="login100-form-btn forsubmit" style="margin-top: 20px;" type="submit" [disabled] = "userForm.form.invalid" value="Log In">
+							Sign Up
+						</button>
+					</div>
+				</form>
+				</div>
+			</div>
+		</div>
+		<app-footer></app-footer>
+	</div>

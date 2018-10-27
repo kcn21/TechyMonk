@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.button {
+    background-color:red;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 18px 60px;
+    border-radius: 15px;
+    margin: 8px 8px;
+    cursor: pointer;
+    border-color:red;
+    border-style: solid;
+}
+
+.button2{
+padding: 18px 70px;
+}
+button:hover{ border-color:red;border-style: solid;color:red;background-color:white;}
+
+
+.button3 {
+    background-color:orange;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 18px 60px;
+    border-radius: 15px;
+    margin: 8px 8px;
+    cursor: pointer;
+    border-color:orange;
+    border-style: solid;
+}
+
+.button4{
+padding: 18px 70px;
+}
+button:hover{ 
+    border-color:orange;border-style: solid;color:orange;background-color:white;
+}

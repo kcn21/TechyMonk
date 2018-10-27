@@ -1,0 +1,140 @@
+<body class="w3-light-grey">
+    <!-- w3-content defines a container for fixed size centered content, 
+    and is wrapped around the whole page content, except for the footer in this example -->
+    <div class="w3-content" style="max-width:1400px">
+    
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-32"> 
+      <h1><b>Techy Monk Blog</b></h1>
+      <p>Welcome to the blog of <span class="w3-tag">Technology & Security</span></p>
+    </header>
+    
+    <!-- Grid -->
+    <div class="w3-row">
+    
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+      <!-- Blog entry -->
+      <div class="w3-card-4 w3-margin w3-white show" id="one">
+        <img src="assets/blog/Gmail.jpg" alt="Nature" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Google Admits: Third-Party Apps Can Still Access Your Gmail Data</b></h3>
+          <h5>Security, <span class="w3-opacity">April 24,2018 </span></h5>
+        </div>
+    
+        <div class="w3-container">
+          <p>Back in July 2018, it was reported that Google shares Gmail user data with third-party apps and US lawmakers had asked the company to explain what it was up to.
+    
+          Now Google has officially admitted to not only giving Gmail account data to third-party developers, but also allowing them to share that data with other third parties as well..</p>
+          <div class="w3-row">
+            <div class="w3-col m8 s12">
+              <p><a  routerLink="/gmail" class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    
+      <!-- Blog entry -->
+      <div class="w3-card-4 w3-margin w3-white show" id="two">
+        <img src="assets/blog/shakti-processor.png" alt="Norway" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Linux Boots On “Shakti” — India’s First Ever RISC-V Based Silicon Processor</b></h3>
+          <h5>Tech News, <span class="w3-opacity">
+            September 23,2018</span></h5>
+        </div>
+    
+        <div class="w3-container">
+          <p>RISC-V Workshop in Chennai, India, hosted by The Indian Institute of Technology Madras (IIT Madras), achieved a significant milestone by booting Linux on its first ever RISC-V based silicon chip processor named Shakti (Project Page). The team (which is partly funded by MeiTY, GOI  as part of the India Microprocessor development project ) aims to create a critical mass of CPU architects in India, according to the project lead</p>
+          <div class="w3-row">
+            <div class="w3-col m8 s12">
+              <p><a routerLink="/shakti" class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- END BLOG ENTRIES -->
+    </div>
+    
+    <!-- Introduction menu -->
+    <div class="w3-col l4">
+      <!-- About Card -->
+      <div class="w3-card w3-margin w3-margin-top show" id="three">
+      <img src="assets/blog/m.jpg" style="width:100%">
+        <div class="w3-container w3-white">
+          <h4><b>Microsoft Is Building The World’s First Scalable Quantum Computer</b></h4>
+          <h5>Tech News, <span class="w3-opacity">
+              October 20,2018</span></h5>
+          <p>MOREicrosoft is joining hands with the researcher and engineers of Copenhagen University, Denmark, to build the world’s first scalable quantum computer.
+    
+    According to their blog post, Microsoft’s Scientific director Peter Krogstrup says the “computer of tomorrow” will be able to perform complex calculations in minutes or hours, which the current computers will take at least billion years to complete</p>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col m8 s12">
+              <p><a routerLink="/ms" class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></a></p>
+            </div>
+          </div>
+      </div><hr><hr>
+      
+    <hr>
+      
+    <hr>
+      
+    <hr>
+      <!-- Posts -->
+      <div class="w3-card w3-margin">
+        <div class="w3-container w3-padding">
+          <h4>Popular Posts</h4>
+        </div>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li><a routerLink="shakti" class="w3-padding-16">
+            <img src="assets/blog/shakti-processor.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Linux Boots On “Shakti” — India’s First Ever RISC-V Based Silicon Processor</span><br>
+            <span>Tech News</span>
+            </a>
+          </li>  
+         <li><a routerLink="ms" class="w3-padding-16">
+            <img src="assets/blog/m.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Microsoft Is Building The World’s First Scalable Quantum Computer</span><br>
+            <span>Tech News</span>
+          </a>
+        </li> 
+         <li><a routerLink="/gmail" class="w3-padding-16">
+            <img src="assets/blog/Gmail.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Google Admits: Third-Party Apps Can Still Access Your Gmail Data</span><br>
+            <span>Security</span>
+          </a>
+        </li>  
+        </ul>
+      </div>
+      <hr> 
+     
+       
+      <div class="w3-card w3-margin">
+        <div class="w3-container w3-padding">
+          <h4>Tags</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <br>
+           <button class="w3-tag w3-light-grey w3-margin-bottom" id="first" >Tech News</button>  
+           &nbsp;&nbsp;&nbsp;<button class="w3-tag w3-light-grey w3-small w3-margin-bottom" id="second">Security</button>
+           <button class="w3-tag w3-black w3-small w3-margin-bottom show" id="third">ALL</button> 
+        </div>
+      </div>
+      
+     </div>
+    
+    <!-- END GRID -->
+    </div><br>
+    
+    <!-- END w3-content -->
+    </div>
+    
+    <!-- Footer 
+    <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+      <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+      <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+    </footer>
+    -->
+    <app-footer></app-footer>
+    </body>

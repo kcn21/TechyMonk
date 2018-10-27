@@ -1,0 +1,116 @@
+<body>
+      <br>
+      <br>
+      <br>    
+<div class="row">
+  <div class="one">
+    <div class="col-75">
+      <div class="container">
+        <form #userForm="ngForm" (ngSubmit) = "onClickSubmit()">
+        
+          <div class="row">
+            <div class="col-50">
+              <h3>Billing Address</h3>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" required id="fname" ngModel name="firstname" #name="ngModel" placeholder="ENTER USERNAME">
+              <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                    Username is required
+              </div>
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" required id="email" ngModel name="email" #email="ngModel" placeholder="ENTER EMAIL ADDRESS">
+              <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                  Email is required
+              </div>
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" required id="adr" ngModel name="address" #address="ngModel" placeholder="ENTER ADDRESS">
+              <div *ngIf="address.invalid && (address.dirty || address.touched)" class="alert alert-danger">
+                  Address is required
+              </div>
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+              <input type="text" required id="city" ngModel name="city" #city="ngModel" placeholder="ENTER CITY">
+              <div *ngIf="city.invalid && (city.dirty || city.touched)" class="alert alert-danger">
+                  City is required
+              </div>
+              <div class="row">
+                <div class="col-50">
+                  <label for="state">State</label>
+                  <input type="text" required id="state" ngModel name="state" #state="ngModel" placeholder="ENTER STATE">
+                  <div *ngIf="state.invalid && (state.dirty || state.touched)" class="alert alert-danger">
+                      STATE IS REQUIRED
+                  </div>
+                </div>
+                <div class="col-50">
+                  <label for="zip">Zip</label>
+                  <input type="text" required id="zip" ngModel name="zip" #zip="ngModel" placeholder="ENTER ZIP">
+                  <div *ngIf="zip.invalid && (zip.dirty || zip.touched)" class="alert alert-danger">
+                      ZIP IS REQUIRED
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-50">
+              <h3>Payment</h3>
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label for="cname">Name on Card </label>
+              <input type="text" required id="cname" ngModel name="cardname" #cname="ngModel" placeholder="ENTER THE NAME ON THE CART">
+              <div *ngIf="cname.invalid && (cname.dirty || cname.touched)" class="alert alert-danger">
+                  CARDNAME IS REQUIRED
+              </div>
+              <label for="ccnum">Credit card number</label>
+              <input type="text" required id="ccnum" ngModel name="cardnumber" #cnum="ngModel" placeholder="ENTER 16 DIGITS CART NUMBER">
+              <div *ngIf="cnum.invalid && (cnum.dirty || cnum.touched)" class="alert alert-danger">
+                  CARTNUMBER IS REQUIRED
+              </div>
+              <label for="expmonth">Exp Month</label>
+              <input type="text" required id="expmonth" ngModel name="expmonth" #expmonth="ngModel" placeholder="September">
+              <div *ngIf="expmonth.invalid && (expmonth.dirty || expmonth.touched)" class="alert alert-danger">
+                  EXPIRYMONTH IS REQUIRED
+              </div>
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear">Exp Year</label>
+                  <input type="text" required id="expyear" ngModel name="expyear" #expyear placeholder="2018">
+                  <div *ngIf="cnum.invalid && (cnum.dirty || cnum.touched)" class="alert alert-danger">
+                      MONTH IS REQUIRED
+                  </div>
+                </div>
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" required id="cvv" ngModel name="cvv" #cvv="ngModel" placeholder="352">
+                  <div *ngIf="cvv.invalid && (cvv.dirty || cvv.touched)" class="alert alert-danger">
+                      CVV IS REQUIRED
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <a href="/confirm"><input type="submit" [disabled] = "userForm.form.invalid"  value="Continue to checkout" class="btn"></a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="col-25">
+      <div class="container" style="width:300px;float:right;height:400px;">
+        <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i>&nbsp; &nbsp;<b>2</b></span></h4>
+        <p><a href="#">POCO F1</a> <span class="price">₹23,999</span></p>
+        <p><a href="#">ASUS MAX PRO M1</a> <span class="price">₹14,999</span></p>
+        <hr>
+        <p>Total <span class="price" style="color:black"><b>₹38,998</b></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
